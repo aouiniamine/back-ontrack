@@ -26,6 +26,18 @@ class BinaryTree {
             }
         }
     }
+    searchVal(val) {
+        if (val === this.val) return val;
+        else if (val > this.val) {
+            if (!this.right) return 'Number is not found';
+            else return this.right.searchVal(val);
+        }
+        else if (val < this.val) {
+            if (!this.left) return 'Number is not found';
+            else return this.left.searchVal(val)
+
+        }
+    }
 }
 
 let tree = new BinaryTree(5);
@@ -35,4 +47,4 @@ tree.addBranch(2)
 tree.addBranch(7);
 tree.addBranch(8);
 tree.addBranch(6);
-console.log(tree)
+console.log(tree.searchVal(7), 'expacted => 4')
