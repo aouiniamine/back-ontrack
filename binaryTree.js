@@ -47,6 +47,6 @@ tree.addBranch(2)
 tree.addBranch(7);
 tree.addBranch(8);
 tree.addBranch(6);
-console.log(tree.searchVal(7), 'expacted => 4')
+// console.log(tree.searchVal(7), 'expacted => 4')
 
 export default BinaryTree;
